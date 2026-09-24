@@ -1501,3 +1501,79 @@ function onOpenSummarizationModal() {
 
 	summarizationWindow.show(variation);
 }
+
+// LPL Writer 0.4.2 — non-destructive literary editing preview.
+let lplWriterWindow = null;
+let lplWriterSelection = "";
+
+async function lplWriterGetSelection() {
+	let text = await Asc.Library.GetSelectedText();
+	lplWriterSelection = text || "";
+	return lplWriterSelection;
+}
+
+async function lplWriterWindowShow() {
+	if (Asc.Editor.getType() !== "word") return;
+	if (lplWriterWindow) { try { lplWriterWindow.close(); } catch(e) {} lplWriterWindow = null; }
+	await lplWriterGetSelection();
+	let variation = {
+		url: "lplWriter.html", description: "LPL Writer", isVisual: true,
+		buttons: [], isModal: false, isCanDocked: true, type: "window",
+		EditorsSupport: ["word"], size: [720, 720]
+	};
+	lplWriterWindow = new window.Asc.PluginWindow();
+	lplWriterWindow.attachEvent("onLplReady", function(){
+		lplWriterWindow.command("onLplSelection", {text:lplWriterSelection});
+	});
+	lplWriterWindow.attachEvent("onLplRefreshSelection", async function(){
+		let text = await lplWriterGetSelection();
+		if (lplWriterWindow) lplWriterWindow.command("onLplSelection", {text:text});
+	});
+	lplWriterWindow.attachEvent("onLplGenerate", async function(payload){
+		if (!lplWriterWindow) return;
+		try {
+			let text = (payload && payload.selected_text) || lplWriterSelection || "";
+			if (!text.trim()) { lplWriterWindow.command("onLplResult", {error:"No manuscript text is selected."}); return; }
+			let engine = AI.Request.create(AI.ActionType.Chat);
+			if (!engine) { lplWriterWindow.command("onLplResult", {error:"No Chat model is configured in ONLYOFFICE AI Settings."}); return; }
+			let isAnalysis = payload && payload.mode === "ANALYZE";
+			let prompt = "You are a precise literary editor executing an LPL contract. Preserve established facts, canon, POV, character continuity, and the fundamental event unless the author direction explicitly says otherwise.\n\n" +
+				"=== LPL CONTRACT ===\n" + ((payload && payload.lpl) || "") + "\n\n=== SELECTED MANUSCRIPT ===\n" + text + "\n\n";
+			if (isAnalysis) {
+				prompt += "Return concise literary analysis only. Do not rewrite the passage.";
+				let analysis = await engine.chatRequest(prompt);
+				lplWriterWindow.command("onLplResult", {analysis: analysis || ""});
+				return;
+			}
+			prompt += 'Return STRICT JSON only, with exactly two string fields: {"revision":"the complete revised passage","explanation":"a brief explanation of the craft changes"}. Do not use markdown fences. The revision must contain only the revised manuscript, not labels or commentary.';
+			let raw = await engine.chatRequest(prompt);
+			if (!raw) { lplWriterWindow.command("onLplResult", {error:"The AI model returned no text."}); return; }
+			let cleaned = String(raw).trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+			let result;
+			try { result = JSON.parse(cleaned); }
+			catch(e) {
+				// Fail safely: show the model output as a proposed revision; never alter the document automatically.
+				result = {revision:String(raw).trim(), explanation:"The model did not return structured JSON; review this proposal carefully before accepting."};
+			}
+			lplWriterWindow.command("onLplResult", {revision:result.revision || "", explanation:result.explanation || ""});
+		} catch(e) {
+			if (lplWriterWindow) lplWriterWindow.command("onLplResult", {error:"AI request failed: " + (e && e.message ? e.message : e)});
+		}
+	});
+	lplWriterWindow.attachEvent("onLplAccept", async function(data){
+		let revision = data && data.revision ? String(data.revision) : "";
+		if (!revision.trim()) { if(lplWriterWindow) lplWriterWindow.command("onLplAccepted", {ok:false}); return; }
+		try {
+			Asc.scope.lplRevision = revision;
+			await Asc.Editor.callMethod("StartAction", ["GroupActions"]);
+			await Asc.Editor.callCommand(function(){ Api.ReplaceTextSmart([Asc.scope.lplRevision]); });
+			await Asc.Editor.callMethod("EndAction", ["GroupActions"]);
+			if(lplWriterWindow) lplWriterWindow.command("onLplAccepted", {ok:true});
+		} catch(e) {
+			try { await Asc.Editor.callMethod("EndAction", ["GroupActions"]); } catch(_) {}
+			if(lplWriterWindow) lplWriterWindow.command("onLplAccepted", {ok:false});
+		}
+	});
+	lplWriterWindow.show(variation);
+}
+window.lplWriterWindowShow = lplWriterWindowShow;

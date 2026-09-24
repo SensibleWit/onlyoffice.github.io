@@ -963,6 +963,14 @@ async function registerButtons(window, undefined)
 		/*if (window.AscDesktopEditor) {
 			neededVersionForAiAssistant = 9003000;
 		}*/
+		if (Asc.Editor.getType() === "word") {
+			const buttonLplWriter = new Asc.ButtonToolbar(buttonMainToolbar);
+			buttonLplWriter.text = "LPL Writer";
+			buttonLplWriter.icons = getToolBarButtonIcons("written-plugin");
+			buttonLplWriter.separator = true;
+			buttonLplWriter.attachOnClick(function(){ window.lplWriterWindowShow(); });
+		}
+
 		if (editorVersion >= neededVersionForAiAssistant && Asc.Editor.getType() === "word")
 		{	
 			const buttonCustomAssistant = new Asc.ButtonToolbar(buttonMainToolbar);
