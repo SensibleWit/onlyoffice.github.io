@@ -1,0 +1,46 @@
+{
+  "category": "Conflict & Suspense",
+  "operators": [
+    { "code": "CONFLICT", "label": "Conflict" },
+    {
+      "code": "TENS+",
+      "label": "Increase Tension",
+      "intent": "Increase narrative tension while preserving facts, events, POV, outcome and character intent.",
+      "guidance": [
+        "Increase consequential uncertainty: something that matters must be in doubt.",
+        "Prefer information asymmetry, delayed confirmation, narrowing options or conflicting objectives.",
+        "Tension comes from structure and withholding, not from ominous vocabulary."
+      ],
+      "avoid": ["Adding ominous adjectives", "New events that change the outcome", "Cheap false alarms"],
+      "facets": ["focus", "placement"],
+      "variants": [
+        { "code": "SUSPENSE", "label": "Suspense", "intent": "The reader knows or suspects something the character does not; tension from waiting.", "guidance": ["Make the danger or stakes clear to the reader.", "Slow the character's approach to it."] },
+        { "code": "MYSTERY", "label": "Mystery / Curiosity", "intent": "The reader knows less than they want to; tension from an open question.", "guidance": ["Raise a specific question and withhold the answer.", "Offer partial information that sharpens the question."] },
+        { "code": "CLOCK", "label": "Ticking Clock", "intent": "Tension from limited time.", "guidance": ["Make the deadline concrete.", "Insert delays and obstacles; mark the passing of time."] },
+        { "code": "FRICTION", "label": "Interpersonal Friction", "intent": "Tension between characters whose goals conflict within the scene.", "guidance": ["Give each character a clear want in the scene.", "Let exchanges carry pressure beneath politeness."] },
+        { "code": "DILEMMA", "label": "Dilemma", "intent": "Tension from a choice between costly options.", "guidance": ["Make both options genuinely costly.", "Delay the decision."] },
+        { "code": "THRESHOLD", "label": "Threshold / Anticipation", "intent": "Tension at the edge of a discovery or irreversible act.", "guidance": ["Linger at the threshold with precise detail.", "Make the character hesitate for a reason."] },
+        { "code": "PHYSICAL", "label": "Physical Jeopardy", "intent": "Tension from danger to the body or to something fragile.", "guidance": ["Make the physical situation clear and spatially precise.", "Narrow the margin of error."] }
+      ]
+    },
+    {
+      "code": "TENS-",
+      "label": "Reduce Tension",
+      "intent": "Reduce immediate tension without flattening character or deleting necessary information.",
+      "guidance": [
+        "Increase breathing room, clarity or reflection without removing essential stakes.",
+        "Resolve or defer minor uncertainties that compete with the main one.",
+        "Let the pace ease through fuller sentences and settled detail."
+      ],
+      "avoid": ["Deleting plot-relevant information", "Making characters passive"],
+      "facets": ["placement"],
+      "variants": [
+        { "code": "RELEASE", "label": "Release After Peak", "intent": "Let tension drain after a climax.", "guidance": ["Show aftermath in the body and surroundings.", "Allow ordinary details to return."] },
+        { "code": "BREATHER", "label": "Breather Scene", "intent": "Create a pause between high-tension sections.", "guidance": ["Introduce warmth, humor or routine.", "Keep a faint thread of the larger stakes."] },
+        { "code": "CLARIFY", "label": "Clarify Confusion", "intent": "Reduce tension that comes from reader confusion rather than design.", "guidance": ["Clarify who, where and what.", "Keep intentional mysteries intact."] }
+      ]
+    },
+    { "code": "EXPECT", "label": "Expectation" },
+    { "code": "DREAD", "label": "Dread" }
+  ]
+}

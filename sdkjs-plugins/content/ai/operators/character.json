@@ -1,0 +1,11 @@
+{
+  "category": "Character",
+  "operators": [
+    { "code": "NEWCHAR", "label": "New Character" },
+    { "code": "RESOLVE", "label": "Resolve" },
+    { "code": "NAIVE", "label": "Naivete" },
+    { "code": "FOOL", "label": "Foolishness" },
+    { "code": "MEMLAPSE", "label": "Lapse of Memory" },
+    { "code": "DELUS", "label": "Delusion" }
+  ]
+}

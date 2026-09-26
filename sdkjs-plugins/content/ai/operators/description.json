@@ -1,0 +1,33 @@
+{
+  "category": "Description & Style",
+  "operators": [
+    {
+      "code": "DESC+",
+      "label": "More Description",
+      "intent": "Enrich description so that the reader sees, hears and feels the scene more precisely, filtered through the POV character.",
+      "guidance": [
+        "Add specificity, not length for its own sake: one exact detail beats three general ones.",
+        "Filter description through what this character would notice and how they would name it.",
+        "Keep description doing work: characterizing, building mood or advancing understanding."
+      ],
+      "avoid": ["Adjective stacking", "Purple prose", "Description that stalls a tense moment unless intended", "Changing established physical facts"],
+      "facets": ["placement"],
+      "variants": [
+        { "code": "SENSORY", "label": "Sensory", "intent": "Widen the senses beyond sight: sound, smell, touch, temperature, taste.", "guidance": ["Add at least one non-visual sense.", "Tie sensation to the character's body in the space."] },
+        { "code": "SPATIAL", "label": "Spatial / Blocking", "intent": "Clarify where things and people are and how they move in the space.", "guidance": ["Establish orientation and distance.", "Keep movement trackable."] },
+        { "code": "CHARACTER_LENS", "label": "Character-Filtered", "intent": "Description that reveals the observer as much as the observed.", "guidance": ["Use the character's vocabulary, judgments and associations.", "Let what they notice characterize them."] },
+        { "code": "EXPERT", "label": "Expert / Technical", "intent": "Description through specialist knowledge and precise terminology.", "guidance": ["Use accurate terms naturally, as the character would.", "Keep it readable for non-specialists through context."] },
+        { "code": "ATMOSPHERIC", "label": "Atmospheric", "intent": "Description that establishes mood through light, weather and texture.", "guidance": ["Choose details for emotional charge.", "Keep a consistent tonal palette."] },
+        { "code": "TEXTURE", "label": "Material Texture", "intent": "Close-up description of surfaces, materials and small physical qualities.", "guidance": ["Slow down on one object.", "Use exact comparisons drawn from the character's world."] }
+      ]
+    },
+    { "code": "DESC-", "label": "Less Description" },
+    { "code": "IMG", "label": "Imagery" },
+    { "code": "ATM", "label": "Atmosphere" },
+    { "code": "VOICE", "label": "Voice" },
+    { "code": "PACE+", "label": "Faster Pace" },
+    { "code": "PACE-", "label": "Slower Pace" },
+    { "code": "IRONY", "label": "Irony" },
+    { "code": "SYMBOL", "label": "Symbolism" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "category": "Time & Memory",
+  "operators": [
+    { "code": "FLASH", "label": "Flashback" },
+    { "code": "MEMORY", "label": "Memory" },
+    { "code": "FLASHFWD", "label": "Flash-forward" },
+    { "code": "DREAM", "label": "Dream" },
+    { "code": "ELLIPSIS", "label": "Ellipsis" }
+  ]
+}

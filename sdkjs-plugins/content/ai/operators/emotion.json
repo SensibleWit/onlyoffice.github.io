@@ -1,0 +1,479 @@
+{
+  "category": "Emotion",
+  "operators": [
+    {
+      "code": "FEAR",
+      "label": "Fear",
+      "intent": "Make fear operative in the passage: it should change perception, attention and choices, not just be named.",
+      "guidance": [
+        "Let fear alter what the character notices and what they fail to notice.",
+        "Keep the source of the fear consistent with established facts; do not invent new threats unless the author direction allows it.",
+        "Prefer precise, particular detail over generic signals of alarm."
+      ],
+      "avoid": ["Stock physical clichés (racing heart, blood running cold, hair standing on end) unless made specific", "Stacking ominous adjectives", "Telling the reader the character is afraid when it can be shown"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "UNEASE",
+          "label": "Unease",
+          "intent": "Low-level wrongness that cannot yet be named; alertness without an object.",
+          "guidance": ["Introduce one or two small incongruities the character half-registers.", "Keep the prose calm on the surface; let the unease sit underneath it.", "Do not resolve or explain the source."]
+        },
+        {
+          "code": "DREAD",
+          "label": "Dread",
+          "intent": "Anticipatory fear of something known to be coming; the threat is expected, not present.",
+          "guidance": ["Stretch time before the feared moment.", "Let attention snag on small preparatory or procedural details.", "Withhold the moment itself; end before it arrives or just as it begins."],
+          "avoid": ["Having the feared event happen early in the passage"]
+        },
+        {
+          "code": "UNCANNY",
+          "label": "Uncanny",
+          "intent": "The familiar made wrong; the character's trust in their own perception or expertise is unsettled.",
+          "guidance": ["Anchor the wrongness in something the character knows well, so the violation registers.", "Let the character reach for explanations that do not quite fit.", "Keep the anomaly concrete and precisely observed rather than vague or supernatural."],
+          "avoid": ["Explaining the anomaly", "Horror-genre vocabulary"]
+        },
+        {
+          "code": "TERROR",
+          "label": "Terror",
+          "intent": "Acute fear of an immediate, present threat.",
+          "guidance": ["Narrow attention to the threat and the next second.", "Shorten syntax at the peak; let sentences fragment where the mind does.", "Keep physical action clear and trackable even as perception narrows."]
+        },
+        {
+          "code": "PANIC",
+          "label": "Panic",
+          "intent": "Fear that breaks control; thought scatters and action misfires.",
+          "guidance": ["Show plans forming and collapsing.", "Let the character make a small wrong move or repeat an action uselessly.", "Allow run-on or looping sentences that mirror loss of control."]
+        },
+        {
+          "code": "HORROR",
+          "label": "Horror",
+          "intent": "Fear fused with revulsion; the mind recoils from what it perceives or understands.",
+          "guidance": ["Focus on the moment of comprehension more than the object itself.", "Let the character try not to look, or not to think it through.", "Use one precise, unbearable detail rather than an inventory of gore."]
+        },
+        {
+          "code": "FREEZE",
+          "label": "Paralysis / Shock",
+          "intent": "The freeze response: the body will not act and perception becomes oddly sharp and detached.",
+          "guidance": ["Slow time; render irrelevant details with unnatural clarity.", "Separate the character's awareness from their body.", "Keep emotion flat on the surface; the shock is in the dissociation."]
+        },
+        {
+          "code": "PARANOIA",
+          "label": "Paranoia",
+          "intent": "Fear directed at other people's intentions; neutral signals are read as threats.",
+          "guidance": ["Have the character over-interpret small gestures, pauses or words.", "Keep it ambiguous whether the suspicion is justified.", "Show the character's reasoning, internally consistent but narrowing."]
+        },
+        {
+          "code": "FOR_ANOTHER",
+          "label": "Fear for Another",
+          "intent": "The threat is to someone the character loves or is responsible for; fear shaped by helplessness.",
+          "guidance": ["Shift attention outward to the other person.", "Emphasize the limits of what the character can do.", "Let love and fear be inseparable in the same details."]
+        },
+        {
+          "code": "SOCIAL",
+          "label": "Social Fear / Exposure",
+          "intent": "Fear of humiliation, judgment, or being found out.",
+          "guidance": ["Heighten awareness of being watched or assessed.", "Show self-monitoring: rehearsed words, managed expression.", "Let the stakes be status, belonging or secrecy rather than physical harm."]
+        },
+        {
+          "code": "EXISTENTIAL",
+          "label": "Existential Fear",
+          "intent": "Fear of mortality, meaninglessness, insignificance or scale.",
+          "guidance": ["Let an ordinary detail open onto something vast.", "Keep it grounded in a concrete moment rather than abstract philosophy.", "Allow the fear to remain unanswered."]
+        },
+        {
+          "code": "SUPPRESSED",
+          "label": "Suppressed Fear",
+          "intent": "Fear masked by composure, competence or routine; it leaks rather than shows.",
+          "guidance": ["Keep the character's surface controlled and even professional.", "Let the fear leak through a small tell: over-precision, a repeated action, a sentence left unfinished.", "Never name the fear directly."]
+        }
+      ]
+    },
+    {
+      "code": "GRIEF",
+      "label": "Grief",
+      "intent": "Render grief as a changed relationship to the world after loss, not as a display of sorrow.",
+      "guidance": [
+        "Ground grief in specific objects, habits and absences tied to what was lost.",
+        "Allow grief to be interrupted by the ordinary; its intrusions are what hurt.",
+        "Keep the loss consistent with established facts."
+      ],
+      "avoid": ["Sentimental summaries of the lost person", "Tears as the main signal of grief", "Consolation the text has not earned"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "FRESH",
+          "label": "Fresh / Acute",
+          "intent": "Grief immediately after the loss; disbelief and disorientation.",
+          "guidance": ["Show the mind failing to update: reaching for the person, planning around them.", "Let the world seem strangely unchanged.", "Keep sentences plain; the facts are heavy enough."]
+        },
+        {
+          "code": "NUMB",
+          "label": "Numb",
+          "intent": "Grief as absence of feeling; the character is functional and disturbed by their own flatness.",
+          "guidance": ["Render tasks and logistics in flat detail.", "Let the character notice that they are not feeling what they expect.", "Allow one small crack that the character does not examine."]
+        },
+        {
+          "code": "AMBUSH",
+          "label": "Ambush",
+          "intent": "Grief triggered unexpectedly by an ordinary object, phrase or sensation, long after the loss.",
+          "guidance": ["Begin in the ordinary; let the trigger be small and specific.", "Make the shift sudden and physical.", "Return, or fail to return, to the ordinary afterwards."]
+        },
+        {
+          "code": "ANTICIPATORY",
+          "label": "Anticipatory",
+          "intent": "Grieving a loss that has not yet happened but is certain.",
+          "guidance": ["Double each present moment with its future absence.", "Let the character try to memorize things.", "Keep the loved one present and alive in the scene."]
+        },
+        {
+          "code": "DISENFRANCHISED",
+          "label": "Unacknowledged",
+          "intent": "Grief the character is not permitted or does not feel entitled to show (a secret relationship, an estranged person, a non-human loss).",
+          "guidance": ["Show the gap between public behavior and private loss.", "Let others' ordinary remarks cut without their knowing.", "Keep the grief mostly hidden."]
+        },
+        {
+          "code": "GUILT",
+          "label": "Grief with Guilt",
+          "intent": "Grief entangled with self-blame, regret or things left unsaid.",
+          "guidance": ["Have the mind return compulsively to a specific moment or choice.", "Let counterfactuals intrude ('if she had...').", "Do not absolve the character within the passage."]
+        },
+        {
+          "code": "LINGERING",
+          "label": "Long / Lingering",
+          "intent": "Grief years later; integrated into life but still shaping it.",
+          "guidance": ["Keep the tone quiet and habitual.", "Show rituals and small accommodations that have become normal.", "Let tenderness and ache coexist."]
+        },
+        {
+          "code": "COLLECTIVE",
+          "label": "Collective / Communal",
+          "intent": "Grief shared by a group, family or community; private loss inside public mourning.",
+          "guidance": ["Show how people grieve differently side by side.", "Let ritual and procedure structure the scene.", "Find the one private moment inside the public one."]
+        }
+      ]
+    },
+    {
+      "code": "LONGING",
+      "label": "Longing",
+      "intent": "Make desire for something absent or unattainable shape the character's attention and the prose.",
+      "guidance": [
+        "Make the object of longing specific, even if the character cannot name it.",
+        "Let longing show in where attention lingers and returns.",
+        "Keep the distance between the character and what they want intact."
+      ],
+      "avoid": ["Resolving the longing", "Abstract statements of yearning", "Sighing and gazing clichés"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "ROMANTIC",
+          "label": "Romantic",
+          "intent": "Longing for a person, their closeness or attention.",
+          "guidance": ["Heighten awareness of the other's body, voice and small habits.", "Let proximity and restraint coexist.", "Keep the longing partly concealed from the other person."]
+        },
+        {
+          "code": "NOSTALGIA",
+          "label": "Nostalgia",
+          "intent": "Longing for a past time, place or version of oneself.",
+          "guidance": ["Let a present detail open onto a remembered one.", "Allow the memory to be slightly idealized, and let the character half-know it.", "Return to the present with a felt gap."]
+        },
+        {
+          "code": "HOMESICK",
+          "label": "Homesickness",
+          "intent": "Longing for a specific home, people or place one has left.",
+          "guidance": ["Use sensory specifics of the absent place: smells, sounds, textures.", "Contrast them with the unfamiliar present.", "Keep it concrete and local."]
+        },
+        {
+          "code": "ASPIRATION",
+          "label": "Aspirational",
+          "intent": "Longing for an achievement, discovery or life not yet attained.",
+          "guidance": ["Show how the desire has shaped years of attention or effort.", "Make the object precise (a specimen, a role, a result).", "Let hope and hunger be visible in how the character handles relevant objects."]
+        },
+        {
+          "code": "LOST",
+          "label": "For the Lost",
+          "intent": "Longing for someone or something that cannot return.",
+          "guidance": ["Let longing and grief overlap without collapsing into each other.", "Focus on a single irreplaceable detail.", "Keep the impossibility present."]
+        },
+        {
+          "code": "UNNAMED",
+          "label": "Unnamed / Sehnsucht",
+          "intent": "Longing without a clear object; ache for something the character cannot identify.",
+          "guidance": ["Tie the feeling to light, distance, music or landscape.", "Let the character fail to name what they want.", "Keep the prose open-ended."]
+        },
+        {
+          "code": "FORBIDDEN",
+          "label": "Forbidden",
+          "intent": "Longing for something the character must not have or admit to wanting.",
+          "guidance": ["Show desire and self-prohibition in the same gesture.", "Let the character redirect attention and fail.", "Keep it unconfessed."]
+        }
+      ]
+    },
+    {
+      "code": "ANGER",
+      "label": "Anger",
+      "intent": "Make anger a force that changes perception, speech and action in the passage.",
+      "guidance": [
+        "Tie the anger to a specific grievance consistent with established facts.",
+        "Let anger distort perception: sharpened, selective, uncharitable.",
+        "Show what the character does with the anger, not only that they feel it."
+      ],
+      "avoid": ["Clenched fists and red faces as the main signals", "Exclamation marks carrying the emotion", "Out-of-character outbursts"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "RAGE",
+          "label": "Rage / Explosive",
+          "intent": "Anger that breaks through restraint into action or speech.",
+          "guidance": ["Build pressure before the break.", "Make the outburst specific and consequential.", "Show the moment after, when the damage is visible."]
+        },
+        {
+          "code": "COLD",
+          "label": "Cold Anger",
+          "intent": "Anger expressed as control, precision and withdrawal of warmth.",
+          "guidance": ["Make speech clipped, exact and polite.", "Let silence and stillness carry the threat.", "Show others recognizing the danger."]
+        },
+        {
+          "code": "RESENTMENT",
+          "label": "Resentment",
+          "intent": "Old, accumulated anger kept alive by memory and comparison.",
+          "guidance": ["Let the character recall past slights while observing the present.", "Show small, petty acts or thoughts.", "Keep it mostly unexpressed."]
+        },
+        {
+          "code": "INDIGNATION",
+          "label": "Righteous Indignation",
+          "intent": "Anger on behalf of a principle or another person; morally charged.",
+          "guidance": ["Make the injustice concrete.", "Let the character feel justified and clear.", "Allow a hint that righteousness has its own blindness."]
+        },
+        {
+          "code": "FRUSTRATION",
+          "label": "Frustration",
+          "intent": "Anger at obstacles, incompetence, or one's own limits.",
+          "guidance": ["Show repeated attempts and blocked progress.", "Let the anger target objects or small things.", "Keep it proportionate to the stakes."]
+        },
+        {
+          "code": "SUPPRESSED",
+          "label": "Suppressed",
+          "intent": "Anger the character will not or cannot express; it leaks.",
+          "guidance": ["Keep the surface civil.", "Let the anger escape through over-careful actions, a tone, a small cruelty.", "Never name the anger directly."]
+        },
+        {
+          "code": "SELF",
+          "label": "At Oneself",
+          "intent": "Anger turned inward; self-reproach and harsh internal voice.",
+          "guidance": ["Render the harsh internal voice in the character's own idiom.", "Tie it to a specific mistake.", "Show how it affects the character's handling of others."]
+        },
+        {
+          "code": "HUMILIATED",
+          "label": "Humiliated Anger",
+          "intent": "Anger born from shame or being diminished in front of others.",
+          "guidance": ["Show shame and anger arriving together.", "Let the character want to strike back and also to disappear.", "Keep the social situation vivid."]
+        }
+      ]
+    },
+    {
+      "code": "HOPE",
+      "label": "Hope",
+      "intent": "Make hope a fragile, active force: an orientation toward a possible good the character does not yet have.",
+      "guidance": [
+        "Keep the uncertainty real; hope requires the possibility of failure.",
+        "Show hope in attention, planning and restraint.",
+        "Tie hope to a specific possibility grounded in established facts."
+      ],
+      "avoid": ["Guaranteeing the outcome", "Inspirational phrasing", "Sudden unexplained optimism"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "GUARDED",
+          "label": "Guarded",
+          "intent": "Hope the character distrusts or refuses to fully admit.",
+          "guidance": ["Show the character correcting their own hopeful thoughts.", "Let hope leak through actions taken 'just in case'.", "Keep self-protection visible."]
+        },
+        {
+          "code": "DESPERATE",
+          "label": "Desperate",
+          "intent": "Hope held because there is nothing else left.",
+          "guidance": ["Make the odds clear.", "Let the character cling to a small sign.", "Allow the hope to be irrational and understandable."]
+        },
+        {
+          "code": "DAWNING",
+          "label": "Dawning",
+          "intent": "Hope emerging gradually as evidence accumulates.",
+          "guidance": ["Stage small pieces of evidence in sequence.", "Let the character resist and then begin to allow it.", "End on possibility, not certainty."]
+        },
+        {
+          "code": "QUIET",
+          "label": "Quiet Endurance",
+          "intent": "Low, steady hope that sustains daily life through hardship.",
+          "guidance": ["Show routines and small acts of care.", "Keep the tone modest.", "Let hope be implicit in continuing."]
+        },
+        {
+          "code": "FOR_OTHER",
+          "label": "For Another",
+          "intent": "Hope invested in someone else's future.",
+          "guidance": ["Direct attention to the other person.", "Show what the character is willing to sacrifice.", "Keep the other's agency intact."]
+        },
+        {
+          "code": "RECKLESS",
+          "label": "Reckless / Naive",
+          "intent": "Hope that outruns evidence and may lead the character astray.",
+          "guidance": ["Let the reader see risks the character discounts.", "Keep the character sympathetic.", "Build dramatic irony."]
+        }
+      ]
+    },
+    {
+      "code": "DESPAIR",
+      "label": "Despair",
+      "intent": "Render the loss of hope as a change in how the world and the future appear.",
+      "guidance": [
+        "Show the future closing: options narrowing, effort seeming pointless.",
+        "Keep it grounded in specific circumstances.",
+        "Let despair affect perception, pacing and syntax."
+      ],
+      "avoid": ["Melodramatic declarations", "Instant rescue", "Abstract hopelessness detached from events"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "COLLAPSE",
+          "label": "Collapse",
+          "intent": "The moment hope breaks; sudden loss of the future.",
+          "guidance": ["Anchor it to a specific event or piece of news.", "Show the body and mind giving way.", "Keep it brief and heavy."]
+        },
+        {
+          "code": "RESIGNED",
+          "label": "Resigned",
+          "intent": "Quiet acceptance of defeat; the fight has gone out.",
+          "guidance": ["Flatten the tone.", "Show the character stopping an action they would normally take.", "Let calm be the disturbing signal."]
+        },
+        {
+          "code": "BITTER",
+          "label": "Bitter",
+          "intent": "Despair turned to cynicism or contempt.",
+          "guidance": ["Give the character a sharp, sardonic internal voice.", "Let them dismiss what others still value.", "Hint at the wound beneath the contempt."]
+        },
+        {
+          "code": "EXISTENTIAL",
+          "label": "Existential",
+          "intent": "Despair about meaning itself, not only circumstances.",
+          "guidance": ["Let ordinary objects seem arbitrary or empty.", "Keep it concrete to a moment.", "Avoid philosophical lecture."]
+        },
+        {
+          "code": "EXHAUSTION",
+          "label": "Exhaustion",
+          "intent": "Despair from depletion; too tired to hope.",
+          "guidance": ["Slow the prose.", "Render effort as heavy and small tasks as enormous.", "Show attention drifting."]
+        },
+        {
+          "code": "TRAPPED",
+          "label": "Trapped",
+          "intent": "Despair from being unable to leave a situation.",
+          "guidance": ["Emphasize enclosure and repetition.", "Show escape routes considered and closed.", "Keep the stakes specific."]
+        }
+      ]
+    },
+    {
+      "code": "JOY",
+      "label": "Happiness / Joy",
+      "intent": "Render happiness as a vivid, specific state that changes perception, without sentimentality.",
+      "guidance": [
+        "Make joy specific to this character and this moment.",
+        "Let joy sharpen perception of small details.",
+        "Allow a trace of awareness that the moment will pass, where fitting."
+      ],
+      "avoid": ["Generic smiling and laughing", "Exclamation-heavy prose", "Sugary summary"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "ELATION",
+          "label": "Elation",
+          "intent": "High, energetic joy; exhilaration.",
+          "guidance": ["Quicken rhythm.", "Let the body want to move.", "Allow the character to be briefly unguarded or foolish."]
+        },
+        {
+          "code": "CONTENTMENT",
+          "label": "Contentment",
+          "intent": "Quiet, settled happiness; nothing more is needed.",
+          "guidance": ["Slow the prose.", "Dwell on sensory comfort and ordinary things.", "Keep the stakes low and the attention wide."]
+        },
+        {
+          "code": "RELIEF",
+          "label": "Relief",
+          "intent": "Joy as release from fear or strain.",
+          "guidance": ["Show the tension leaving the body.", "Let the character become aware of how afraid they had been.", "Allow shakiness or laughter at odd moments."]
+        },
+        {
+          "code": "TRIUMPH",
+          "label": "Triumph",
+          "intent": "Joy of achievement or victory.",
+          "guidance": ["Tie it to the specific effort that preceded it.", "Show the character's pride, possibly with a flicker of vanity.", "Keep it proportionate."]
+        },
+        {
+          "code": "WONDER",
+          "label": "Wonder / Discovery",
+          "intent": "Joy of encountering something marvelous or newly understood.",
+          "guidance": ["Slow down at the moment of perception.", "Let expertise and awe coexist.", "Render the object with precise attention."]
+        },
+        {
+          "code": "SHARED",
+          "label": "Shared / Communal",
+          "intent": "Joy felt with others; connection is part of the happiness.",
+          "guidance": ["Show glances, laughter, shared gestures.", "Let the joy pass between people.", "Keep individual personalities distinct."]
+        },
+        {
+          "code": "BITTERSWEET",
+          "label": "Bittersweet",
+          "intent": "Happiness shadowed by loss or impermanence.",
+          "guidance": ["Hold joy and sadness in the same detail.", "Let the character know the moment will not last.", "Keep it understated."]
+        }
+      ]
+    },
+    {
+      "code": "SAD",
+      "label": "Sadness",
+      "intent": "Render sadness as a lowered, altered way of perceiving and moving through the moment.",
+      "guidance": [
+        "Keep sadness proportionate to its cause.",
+        "Let it color description, pace and attention.",
+        "Show it through specific behavior and perception."
+      ],
+      "avoid": ["Tears as the default signal", "Pathetic fallacy without restraint", "Self-pitying narration unless intended"],
+      "facets": ["expression", "onset", "awareness"],
+      "variants": [
+        {
+          "code": "MELANCHOLY",
+          "label": "Melancholy",
+          "intent": "Diffuse, reflective sadness, sometimes almost pleasurable.",
+          "guidance": ["Let attention drift toward the past and to fading things.", "Use soft, lingering rhythm.", "Keep the cause vague or long-standing."]
+        },
+        {
+          "code": "DISAPPOINTMENT",
+          "label": "Disappointment",
+          "intent": "Sadness at an expectation unmet.",
+          "guidance": ["Make the expectation clear before the letdown.", "Show the character adjusting their face or plans.", "Keep it small-scale and human."]
+        },
+        {
+          "code": "LONELINESS",
+          "label": "Loneliness",
+          "intent": "Sadness of disconnection; being unseen or alone.",
+          "guidance": ["Emphasize space and unanswered signals.", "Let the character notice others' connections.", "Show small attempts to reach out, or their absence."]
+        },
+        {
+          "code": "REGRET",
+          "label": "Regret",
+          "intent": "Sadness about a past choice or missed chance.",
+          "guidance": ["Return to a specific moment of decision.", "Let the present detail evoke the alternative.", "Keep it unresolved."]
+        },
+        {
+          "code": "WISTFUL",
+          "label": "Wistful",
+          "intent": "Gentle sadness mixed with fondness.",
+          "guidance": ["Keep the tone light and tender.", "Let a small detail carry the feeling.", "Avoid heavy stakes."]
+        },
+        {
+          "code": "HEAVY",
+          "label": "Heavy / Low",
+          "intent": "Weighted, depressive sadness that slows everything.",
+          "guidance": ["Slow pace and simplify syntax.", "Make small tasks effortful.", "Dim sensory detail."]
+        }
+      ]
+    }
+  ]
+}

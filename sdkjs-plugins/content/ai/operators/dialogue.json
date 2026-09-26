@@ -1,0 +1,34 @@
+{
+  "category": "Dialogue & Relationships",
+  "operators": [
+    { "code": "DIA", "label": "Dialogue" },
+    {
+      "code": "SUB+",
+      "label": "Increase Subtext",
+      "intent": "Increase the discrepancy between surface language or behavior and the underlying wants, fears, beliefs or motives.",
+      "guidance": [
+        "Move meaning from what is said to what is done, avoided or left out.",
+        "Use omission, gesture, indirection, contradiction or restrained response.",
+        "Trust the reader: remove lines that explain what the subtext already implies."
+      ],
+      "avoid": ["Characters stating their feelings outright", "Narration that decodes the subtext", "Making dialogue so oblique that the scene becomes unclear"],
+      "facets": ["expression", "placement"],
+      "variants": [
+        { "code": "DESIRE", "label": "Withheld Desire", "intent": "A character wants something they will not ask for.", "guidance": ["Let the want steer small choices and topics.", "Keep the ask unspoken."] },
+        { "code": "FEAR", "label": "Concealed Fear", "intent": "A character hides fear behind competence, humor or routine.", "guidance": ["Show control that is slightly too careful.", "Let one detail betray it."] },
+        { "code": "POWER", "label": "Power Play", "intent": "Status and control are negotiated beneath ordinary talk.", "guidance": ["Use interruptions, who asks and who answers, who moves.", "Keep the topic nominally mundane."] },
+        { "code": "HOSTILE_POLITE", "label": "Polite Hostility", "intent": "Courtesy masks antagonism.", "guidance": ["Keep language formally correct.", "Let precision, timing and word choice carry the edge."] },
+        { "code": "DEFLECT", "label": "Deflection", "intent": "A character avoids a subject by changing it, joking or focusing on tasks.", "guidance": ["Make the avoided subject clear to the reader.", "Show repeated swerves."] },
+        { "code": "SHARED_SECRET", "label": "Shared Secret", "intent": "Two characters communicate about something others in the scene must not know.", "guidance": ["Use double meanings.", "Let the other characters miss it."] },
+        { "code": "AFFECTION", "label": "Unspoken Affection", "intent": "Care or love expressed through acts rather than words.", "guidance": ["Show attention to the other's needs.", "Keep verbal exchange understated or gruff."] }
+      ]
+    },
+    { "code": "SARC", "label": "Sarcasm" },
+    { "code": "ROM", "label": "Romance" },
+    { "code": "LOVEINT", "label": "Love Interest" },
+    { "code": "BETRAY", "label": "Betrayal" },
+    { "code": "MISUNDER", "label": "Misunderstanding" },
+    { "code": "TRUST", "label": "Trust" },
+    { "code": "DISTRUST", "label": "Distrust" }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "format": 2,
+  "files": [
+    "narrative.json",
+    "conflict.json",
+    "character.json",
+    "emotion.json",
+    "dialogue.json",
+    "description.json",
+    "intellectual.json",
+    "time.json",
+    "editorial.json",
+    "definitions.json"
+  ],
+  "facets": {
+    "expression": {
+      "label": "Expression",
+      "options": {
+        "interior": "Render the effect mainly through interior thought and perception.",
+        "somatic": "Render the effect mainly through body sensation and physical reaction; name the emotion as little as possible.",
+        "behavioral": "Render the effect mainly through action, gesture and what the character does or fails to do.",
+        "dialogue": "Render the effect mainly through what is said, unsaid, or said wrongly.",
+        "environmental": "Render the effect mainly through how the setting is perceived; let description carry the feeling."
+      }
+    },
+    "onset": {
+      "label": "Onset",
+      "options": {
+        "sudden": "The effect arrives abruptly, at an identifiable moment in the passage.",
+        "creeping": "The effect accumulates gradually; the reader should not be able to point to where it began."
+      }
+    },
+    "awareness": {
+      "label": "Awareness",
+      "options": {
+        "recognized": "The character knows what they are feeling and could name it.",
+        "unrecognized": "The character does not name or understand the feeling; the reader sees more than the character does.",
+        "denied": "The character is actively refusing the feeling; show the effort of refusal."
+      }
+    },
+    "focus": {
+      "label": "Focus",
+      "options": {
+        "reader": "Aim the effect at the reader's experience (suspense, curiosity, anticipation).",
+        "character": "Aim the effect at the character's experience inside the scene."
+      }
+    },
+    "placement": {
+      "label": "Placement",
+      "options": {
+        "opening": "Concentrate the change near the opening of the passage.",
+        "throughout": "Distribute the change across the whole passage.",
+        "ending": "Concentrate the change near the end of the passage; let it land last."
+      }
+    }
+  }
+}

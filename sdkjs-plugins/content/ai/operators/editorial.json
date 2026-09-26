@@ -1,0 +1,72 @@
+{
+  "category": "Editorial",
+  "operators": [
+    {
+      "code": "ANALYZE",
+      "label": "Analyze",
+      "mode": "ANALYZE",
+      "intent": "Diagnose how the selected passage works without rewriting it.",
+      "guidance": [
+        "Be specific: quote short phrases from the passage as evidence.",
+        "Distinguish what is working from what is weak, and say why.",
+        "End with two or three concrete, prioritized suggestions, naming LPL operators where they fit."
+      ],
+      "avoid": ["Rewriting the passage", "Generic praise", "Vague advice such as 'show, don't tell' without a specific location"],
+      "variants": [
+        { "code": "FULL", "label": "Full Diagnostic", "intent": "Cover POV, tension, subtext, pacing, description, emotional movement and likely weaknesses.", "guidance": ["Give each area a short, evidence-based assessment."] },
+        { "code": "TENSION", "label": "Tension Map", "intent": "Trace where tension rises, stalls and releases.", "guidance": ["Walk through the passage in order.", "Identify the single strongest and weakest moment."] },
+        { "code": "POV", "label": "POV & Voice", "intent": "Check consistency of point of view, psychic distance and voice.", "guidance": ["Flag any head-hopping or distance shifts.", "Describe the voice in concrete terms."] },
+        { "code": "PACING", "label": "Pacing", "intent": "Assess sentence rhythm, scene speed and proportion.", "guidance": ["Note where the passage drags or rushes.", "Relate pace to dramatic importance."] },
+        { "code": "EMOTION", "label": "Emotional Arc", "intent": "Trace the emotional movement of the POV character and the likely reader response.", "guidance": ["Name the emotions precisely, using LPL variants where apt (e.g. FEAR:UNCANNY)."] },
+        { "code": "LINE", "label": "Line-Level Prose", "intent": "Assess word choice, repetition, clichés and sentence construction.", "guidance": ["List specific phrases with a brief note on each."] },
+        { "code": "CONTINUITY", "label": "Continuity & Logic", "intent": "Check facts, causality, physical logic and consistency inside the passage.", "guidance": ["List potential inconsistencies with the exact words involved."] }
+      ]
+    },
+    {
+      "code": "DEEPEN",
+      "label": "Deepen",
+      "intent": "Increase psychological, emotional, conceptual or sensory complexity without changing the fundamental event.",
+      "guidance": [
+        "Add specificity rather than verbosity.",
+        "Deepen what is already present rather than introducing new material.",
+        "Let each addition reveal something: about the character, the world or the stakes."
+      ],
+      "avoid": ["Padding", "Explaining the subtext", "Changing what happens"],
+      "facets": ["expression", "placement"],
+      "variants": [
+        { "code": "PSYCH", "label": "Psychological", "intent": "Deepen the character's inner life: motive, contradiction, self-deception.", "guidance": ["Add a thought that complicates the obvious reading of the character."] },
+        { "code": "SENSORY", "label": "Sensory", "intent": "Deepen embodied experience of the scene.", "guidance": ["Add precise sensation tied to the character's body and expertise."] },
+        { "code": "THEMATIC", "label": "Thematic", "intent": "Deepen resonance with the story's larger themes.", "guidance": ["Let a concrete detail carry thematic weight without stating the theme."] },
+        { "code": "RELATIONAL", "label": "Relational", "intent": "Deepen the history and tension between characters present.", "guidance": ["Add a gesture or reference that implies shared history."] },
+        { "code": "BACKSTORY", "label": "Backstory Thread", "intent": "Deepen with a brief, relevant thread of the character's past.", "guidance": ["Keep it to a clause or a sentence or two.", "Tie it directly to the present moment."] },
+        { "code": "STAKES", "label": "Stakes", "intent": "Deepen what is at risk and why it matters to this character.", "guidance": ["Make the personal cost of failure concrete."] }
+      ]
+    },
+    { "code": "EXPAND", "label": "Expand" },
+    {
+      "code": "COMPRESS",
+      "label": "Compress",
+      "intent": "Reduce narrative space while preserving causality, essential information, voice and emotional function.",
+      "guidance": [
+        "Remove repetition and low-value explanation.",
+        "Merge sentences that do the same job.",
+        "Keep the strongest image in each beat and cut the rest."
+      ],
+      "avoid": ["Losing plot-relevant facts", "Flattening the voice", "Cutting the emotional turn"],
+      "facets": ["placement"],
+      "variants": [
+        { "code": "TRIM", "label": "Trim (~15%)", "intent": "Light tightening: cut redundancies and filler words.", "guidance": ["Keep structure and sentence order."] },
+        { "code": "TIGHTEN", "label": "Tighten (~30%)", "intent": "Moderate compression: combine and cut weaker sentences.", "guidance": ["Keep every beat, shorten each."] },
+        { "code": "HALVE", "label": "Halve (~50%)", "intent": "Strong compression to the essential beats.", "guidance": ["Keep only the beats that change something."] },
+        { "code": "SUMMARY", "label": "Scene to Summary", "intent": "Convert dramatized scene into brief narrative summary.", "guidance": ["Keep one vivid detail to anchor the summary."] },
+        { "code": "EXPOSITION", "label": "Cut Exposition", "intent": "Remove explanation the reader can infer.", "guidance": ["Keep action, dialogue and image; cut the commentary on them."] },
+        { "code": "DIALOGUE", "label": "Tighten Dialogue", "intent": "Compress speech and tags while keeping character voice.", "guidance": ["Cut greetings, repetition and unnecessary tags."] }
+      ]
+    },
+    { "code": "CUT", "label": "Cut" },
+    { "code": "POLISH", "label": "Polish" },
+    { "code": "CHK", "label": "Check" },
+    { "code": "FIX", "label": "Fix" },
+    { "code": "CLARIFY", "label": "Clarify" }
+  ]
+}

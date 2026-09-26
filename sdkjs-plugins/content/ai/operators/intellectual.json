@@ -1,0 +1,11 @@
+{
+  "category": "Intellectual & Spiritual",
+  "operators": [
+    { "code": "PHIL", "label": "Philosophical Reflection" },
+    { "code": "WISDOM", "label": "Reflective Wisdom" },
+    { "code": "RELIG", "label": "Religious Experience" },
+    { "code": "FATE", "label": "Surrender / Fate" },
+    { "code": "MEANING", "label": "Meaning" },
+    { "code": "ABSURD", "label": "Absurdity" }
+  ]
+}

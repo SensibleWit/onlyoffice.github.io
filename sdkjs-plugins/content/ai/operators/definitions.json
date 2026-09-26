@@ -1,0 +1,13 @@
+{
+  "category": "Definitions",
+  "operators": [
+    { "code": "ARC", "label": "Arc" },
+    { "code": "BEAT", "label": "Beat" },
+    { "code": "PLOT", "label": "Plot Structure" },
+    { "code": "MOOD", "label": "Mood" },
+    { "code": "THEME", "label": "Theme" },
+    { "code": "CHARACTER_TYPE", "label": "Character Type" },
+    { "code": "TECHNIQUE", "label": "Technique" },
+    { "code": "STYLE", "label": "Style" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "category": "Narrative",
+  "operators": [
+    { "code": "TWIST", "label": "Plot Twist" },
+    { "code": "SURPRISE", "label": "Surprise" },
+    { "code": "UNFORESEEN", "label": "Unforeseen Development" },
+    {
+      "code": "REVERSAL",
+      "label": "Reversal",
+      "intent": "Turn the situation of the passage so that something moves to its opposite: fortune, knowledge, power, allegiance or expectation.",
+      "guidance": [
+        "Set up the prior state clearly enough that the turn registers.",
+        "Make the reversal feel inevitable in hindsight: plant its cause earlier in the passage.",
+        "Place the turn at a precise moment and let the passage register its consequences."
+      ],
+      "avoid": ["Reversals that contradict established facts", "Coincidence as the cause", "Explaining the reversal after it lands"],
+      "facets": ["placement", "focus"],
+      "variants": [
+        { "code": "FORTUNE", "label": "Of Fortune", "intent": "Success becomes failure, or failure becomes success.", "guidance": ["Let the character's own action trigger the turn.", "Show the new situation concretely."] },
+        { "code": "RECOGNITION", "label": "Of Knowledge (Recognition)", "intent": "A discovery transforms the meaning of what came before.", "guidance": ["Plant the detail that will be reinterpreted.", "Stage the moment of recognition in the character's perception.", "Let earlier lines read differently afterwards."] },
+        { "code": "POWER", "label": "Of Power", "intent": "The dominant and subordinate positions in the scene swap.", "guidance": ["Establish who holds power at the start.", "Make the shift hinge on a specific leverage: information, resource, witness.", "Show both characters registering the change."] },
+        { "code": "ALLEGIANCE", "label": "Of Allegiance", "intent": "An ally becomes an opponent, or the reverse.", "guidance": ["Seed motive earlier.", "Reveal through action rather than announcement.", "Keep the character's logic coherent."] },
+        { "code": "EXPECTATION", "label": "Of Expectation", "intent": "The reader's or character's assumption about what is happening proves wrong.", "guidance": ["Lead expectation with fair cues.", "Turn it with a single decisive detail.", "Avoid cheating: the true reading must fit all the facts."] },
+        { "code": "MORAL", "label": "Moral Reversal", "intent": "Sympathy shifts: the wronged party is revealed as wrongdoer, or the reverse.", "guidance": ["Keep both readings plausible until the turn.", "Reveal through a specific act or fact.", "Let the protagonist's judgment be implicated."] }
+      ]
+    },
+    { "code": "REVEAL", "label": "Reveal" },
+    {
+      "code": "CLUE",
+      "label": "Clue",
+      "intent": "Embed a piece of information that will matter later, visible enough to be fair but not so visible that it is obvious.",
+      "guidance": [
+        "Make the clue a concrete, checkable detail.",
+        "Give it a plausible surface reason to be in the passage.",
+        "Do not draw the character's or narrator's attention to its significance unless the variant calls for it."
+      ],
+      "avoid": ["Winking at the reader", "Clues that contradict established facts", "Adding more than one new clue unless asked"],
+      "facets": ["placement", "focus"],
+      "variants": [
+        { "code": "FAIR", "label": "Fair-Play", "intent": "A clue an attentive reader could use to solve the puzzle.", "guidance": ["State the detail plainly once.", "Surround it with ordinary details of similar weight."] },
+        { "code": "BURIED", "label": "Buried in a List", "intent": "Hide the clue among other items of description or procedure.", "guidance": ["Place it in the middle of a list, not first or last.", "Match its phrasing to its neighbors."] },
+        { "code": "RED_HERRING", "label": "Red Herring", "intent": "A misleading clue that points plausibly in the wrong direction.", "guidance": ["Make it more noticeable than true clues.", "Keep it honest: it must have an innocent explanation consistent with the facts."] },
+        { "code": "ABSENCE", "label": "Absence", "intent": "The clue is something missing that should be present.", "guidance": ["Establish the expected pattern.", "Let the absence pass quickly, noted but not examined."] },
+        { "code": "SLIP", "label": "Dialogue Slip", "intent": "A character reveals more than they should in speech.", "guidance": ["Make the slip small and natural.", "Let the scene move on before anyone reacts."] },
+        { "code": "EXPERT", "label": "Expert Observation", "intent": "The clue is registered through the character's specialist knowledge.", "guidance": ["Use accurate professional terminology sparingly.", "Let the character note the detail without yet grasping its full significance."] }
+      ]
+    },
+    { "code": "FORESHADOW", "label": "Foreshadow" },
+    { "code": "CLIFF", "label": "Cliffhanger" }
+  ]
+}
